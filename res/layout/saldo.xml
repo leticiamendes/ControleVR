@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#D4E7ED"
+    android:id="@+id/saldoRelativeLayout" >
+    
+     <fragment
+       class="br.com.vale.controlevr.fragments.TopBar"
+       android:id="@+id/top"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content" />
+    
+    <RelativeLayout 
+        android:id="@+id/body"
+        android:layout_below="@id/top"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+        
+        <RelativeLayout 
+	        android:id="@+id/bodycontent"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_centerVertical="true"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/question"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:text="Qual seu SALDO atual?"
+	            android:textSize="18sp"
+	            android:layout_marginBottom="10dp"
+	            android:textColor="#EB8540" />
+	
+	        <EditText
+	            android:id="@+id/edtSaldoAtual"
+	           	android:layout_below="@id/question"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:gravity="center"
+	            android:ems="6"
+	            android:inputType="numberDecimal" />
+	        
+        </RelativeLayout>
+        
+        <RelativeLayout android:id="@+id/bottom"
+	        android:layout_below="@id/bodycontent"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_alignParentBottom="true"
+	        android:orientation="vertical" >
+	        
+	        <Button android:id="@+id/next"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_margin="20dp"
+	           android:layout_alignParentRight="true"
+	           android:layout_alignParentBottom="true"
+	           android:text="Próximo"
+	           android:enabled="false"
+	           style="@style/btnStyle" />
+        
+    </RelativeLayout>
+            
+    </RelativeLayout>
+        
+</RelativeLayout>
